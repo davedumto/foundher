@@ -33,7 +33,7 @@ export function Membership() {
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-mauve mb-6">
             Choose Your <span className="text-wine">Impact Level</span>
           </h2>
-          <p className="font-body text-xl text-mauve/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-body text-xl text-mauve max-w-3xl mx-auto leading-relaxed">
             Select the membership tier that aligns with your business goals and
             networking ambitions.
           </p>
@@ -57,7 +57,7 @@ export function Membership() {
                     {tier.price}
                   </span>
                 </div>
-                <p className={`font-body ${tier.featured ? 'text-blush/90' : 'text-mauve/70'}`}>
+                <p className={`font-body ${tier.featured ? 'text-blush/90' : 'text-mauve'}`}>
                   {tier.description}
                 </p>
               </div>

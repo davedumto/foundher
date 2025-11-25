@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import { ArrowRightIcon } from 'lucide-react';
+import { motion } from 'framer-motion';
 export function Hero() {
   return <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-wine via-wine to-burgundy overflow-hidden">
       {/* Geometric Pattern Overlay */}
@@ -16,61 +19,81 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 text-center">
-        <div className="mb-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-6"
+        >
           <span className="inline-block px-6 py-2 bg-rose-gold/20 border border-rose-gold text-rose-gold font-display text-sm tracking-wider uppercase rounded-full">
             Found Her Table
           </span>
-        </div>
+        </motion.div>
 
-        <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-8 leading-tight tracking-tight">
+        <motion.h1 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-8 leading-tight tracking-tight"
+        >
           Empowering African
           <br />
           <span className="text-rose-gold">Women Founders</span>
-        </h1>
+        </motion.h1>
 
-        <p className="font-body text-xl sm:text-2xl text-blush/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="font-body text-xl sm:text-2xl text-blush/90 mb-12 max-w-3xl mx-auto leading-relaxed"
+        >
           Join an exclusive network of visionary African women entrepreneurs
           building the future of business through meaningful connections and
           strategic partnerships.
-        </p>
+        </motion.p>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+        >
           <button className="group px-10 py-5 bg-rose-gold hover:bg-rose-gold/90 text-white font-display font-semibold text-lg rounded-lg transition-all duration-300 flex items-center gap-3 shadow-2xl hover:shadow-rose-gold/50 hover:scale-105">
             Join The Network
             <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
-
+{/* 
           <button className="px-10 py-5 bg-transparent border-2 border-blush text-blush hover:bg-blush hover:text-wine font-display font-semibold text-lg rounded-lg transition-all duration-300">
             Explore Opportunities
-          </button>
-        </div>
+          </button> */}
+        </motion.div>
 
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-          <div className="text-center">
-            <div className="text-4xl font-display font-bold text-rose-gold mb-2">
-              500+
-            </div>
-            <div className="text-blush/80 font-body">Active Founders</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-display font-bold text-rose-gold mb-2">
-              50+
-            </div>
-            <div className="text-blush/80 font-body">Corporate Partners</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-display font-bold text-rose-gold mb-2">
-              200+
-            </div>
-            <div className="text-blush/80 font-body">Partnerships Formed</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-display font-bold text-rose-gold mb-2">
-              30+
-            </div>
-            <div className="text-blush/80 font-body">Countries Represented</div>
-          </div>
-        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+        >
+          {[
+            { number: "500+", label: "Active Founders" },
+            { number: "50+", label: "Corporate Partners" },
+            { number: "200+", label: "Partnerships Formed" },
+            { number: "30+", label: "Countries Represented" }
+          ].map((stat, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
+              className="text-center"
+            >
+              <div className="text-4xl font-display font-bold text-rose-gold mb-2">
+                {stat.number}
+              </div>
+              <div className="text-blush/80 font-body">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
 
       {/* Bottom Wave */}

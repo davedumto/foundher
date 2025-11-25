@@ -96,7 +96,7 @@ export function Partnerships() {
           <h3 className="font-display text-3xl sm:text-4xl font-bold text-mauve mb-6">
             Ready to Find Your Perfect Partner?
           </h3>
-          <p className="font-body text-xl text-mauve/70 max-w-3xl mx-auto mb-10 leading-relaxed">
+          <p className="font-body text-xl text-mauve max-w-3xl mx-auto mb-10 leading-relaxed">
             Start building partnerships that matter. Our platform makes it easy
             to discover, connect, and collaborate with the right partners for
             your business.

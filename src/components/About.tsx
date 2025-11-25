@@ -1,27 +1,48 @@
+'use client';
+
 import React from 'react';
 import { ArrowRightIcon } from 'lucide-react';
+import { motion } from 'framer-motion';
 export function About() {
   return <section className="bg-champagne">
       {/* Hero Statement - Minimal & Bold */}
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-32 pb-20">
         <div className="max-w-5xl">
-          <div className="inline-block mb-8">
-            <span className="font-display text-xs tracking-[0.4em] uppercase text-wine/60">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="inline-block mb-8"
+          >
+            <span className="font-display text-xs tracking-[0.4em] uppercase text-wine">
               Our Mission
             </span>
             <div className="h-px bg-wine/20 mt-3"></div>
-          </div>
+          </motion.div>
 
-          <h2 className="font-display text-6xl sm:text-7xl lg:text-8xl font-bold text-mauve leading-[0.95] mb-12">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="font-display text-6xl sm:text-7xl lg:text-8xl font-bold text-mauve leading-[0.95] mb-12"
+          >
             Building
             <br />
             Africa's Future
-          </h2>
+          </motion.h2>
 
-          <p className="font-body text-2xl text-mauve/60 leading-relaxed max-w-2xl">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="font-body text-2xl text-mauve leading-relaxed max-w-2xl"
+          >
             A premium network where African women founders connect, collaborate,
             and create lasting impact across the continent.
-          </p>
+          </motion.p>
         </div>
       </div>
 
@@ -33,7 +54,13 @@ export function About() {
         {/* Quote Overlay */}
         <div className="absolute bottom-16 left-0 right-0">
           <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-            <div className="max-w-3xl bg-white/95 backdrop-blur-sm p-12 rounded-2xl">
+            <motion.div 
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true, margin: "-200px" }}
+              className="max-w-3xl bg-white/95 backdrop-blur-sm p-12 rounded-2xl"
+            >
               <p className="font-display text-3xl text-mauve leading-tight mb-6">
                 "We're not just building businesses—we're building a movement."
               </p>
@@ -41,7 +68,7 @@ export function About() {
               <p className="font-body text-wine font-semibold">
                 FoundHer Network
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -59,7 +86,7 @@ export function About() {
                 <h3 className="font-display text-4xl font-bold text-mauve mb-6">
                   Elite Network
                 </h3>
-                <p className="font-body text-lg text-mauve/70 leading-relaxed mb-8">
+                <p className="font-body text-lg text-mauve leading-relaxed mb-8">
                   Connect with vetted African women founders across industries.
                   Every connection is intentional, every partnership is
                   strategic.
@@ -110,7 +137,7 @@ export function About() {
                 <h3 className="font-display text-4xl font-bold text-mauve mb-6">
                   Pan-African Reach
                 </h3>
-                <p className="font-body text-lg text-mauve/70 leading-relaxed mb-8">
+                <p className="font-body text-lg text-mauve leading-relaxed mb-8">
                   Expand your influence across borders with a network spanning
                   30+ African countries and global diaspora connections.
                 </p>
@@ -138,7 +165,7 @@ export function About() {
       </div>
 
       {/* Final Statement - Bold & Simple */}
-      <div className="bg-white py-32">
+      <div id="membership" className="bg-white py-32">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
           <h3 className="font-display text-5xl sm:text-6xl font-bold text-mauve mb-8 leading-tight">
             More than a network.

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { QuoteIcon } from 'lucide-react';
+import { motion } from 'framer-motion';
 export function SuccessStories() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
@@ -74,23 +75,48 @@ export function SuccessStories() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <span className="inline-block px-6 py-2 bg-dusty-rose/10 border border-dusty-rose text-wine font-display text-sm tracking-wider uppercase rounded-full mb-6">
+          <motion.span 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="inline-block px-6 py-2 bg-dusty-rose/10 border border-dusty-rose text-wine font-display text-sm tracking-wider uppercase rounded-full mb-6"
+          >
             Success Stories
-          </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-mauve mb-6">
+          </motion.span>
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-mauve mb-6"
+          >
             Founders Making <span className="text-wine">Impact</span>
-          </h2>
-          <p className="font-body text-xl text-mauve/70 max-w-3xl mx-auto leading-relaxed">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="font-body text-xl text-mauve max-w-3xl mx-auto leading-relaxed"
+          >
             Real stories from women who transformed their businesses through our
             network.
-          </p>
+          </motion.p>
         </div>
 
         {/* Stories - Desktop Grid / Mobile Carousel */}
         <div className="relative">
           {/* Desktop Grid (hidden on mobile) */}
           <div className="hidden md:grid md:grid-cols-3 gap-8 lg:gap-10">
-            {stories.map((story, index) => <div key={index} className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            {stories.map((story, index) => <motion.div 
+              key={index} 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            >
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden">
                   <img src={story.image} alt={story.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
@@ -120,7 +146,7 @@ export function SuccessStories() {
                     </p>
                   </div>
                 </div>
-              </div>)}
+              </motion.div>)}
           </div>
 
           {/* Mobile Carousel (visible on mobile only) */}

@@ -1,14 +1,23 @@
+'use client';
+
 import React from 'react';
 import { MailIcon, ArrowRightIcon } from 'lucide-react';
+import { motion } from 'framer-motion';
 export function Newsletter() {
   return <section className="py-24 bg-blush">
       <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="bg-gradient-to-br from-wine to-burgundy rounded-3xl p-12 lg:p-16 text-center shadow-2xl relative overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 40, scale: 0.95 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="bg-gradient-to-br from-wine to-burgundy rounded-3xl p-12 lg:p-16 text-center shadow-2xl relative overflow-hidden"
+        >
           {/* Decorative Elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-rose-gold/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-dusty-rose/10 rounded-full blur-3xl"></div>
 
-          <div className="relative z-10">
+          <div className="relative z-10" id="contact">
             <div className="w-16 h-16 bg-rose-gold rounded-2xl flex items-center justify-center mx-auto mb-6">
               <MailIcon className="w-8 h-8 text-white" />
             </div>
@@ -34,7 +43,7 @@ export function Newsletter() {
               anytime.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>;
 }

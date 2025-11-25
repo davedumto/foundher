@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import { CalendarIcon, MapPinIcon, UsersIcon } from 'lucide-react';
+import { motion } from 'framer-motion';
 export function Events() {
   const events = [{
     title: 'The FoundHer Table - Inaugural Gathering',
@@ -15,21 +18,46 @@ export function Events() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <span className="inline-block px-6 py-2 bg-wine/10 border border-wine text-wine font-display text-sm tracking-wider uppercase rounded-full mb-6">
+          <motion.span 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="inline-block px-6 py-2 bg-wine/10 border border-wine text-wine font-display text-sm tracking-wider uppercase rounded-full mb-6"
+          >
             Inaugural Gathering
-          </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-mauve mb-6">
+          </motion.span>
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-mauve mb-6"
+          >
             Where It All <span className="text-wine">Begins</span>
-          </h2>
-          <p className="font-body text-xl text-mauve/70 max-w-3xl mx-auto leading-relaxed">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="font-body text-xl text-mauve max-w-3xl mx-auto leading-relaxed"
+          >
             The inaugural gathering that marks the beginning of our movement - where Africa's most
             visionary women founders come together at The FoundHer Table.
-          </p>
+          </motion.p>
         </div>
 
         {/* Events Grid */}
         <div className="space-y-8">
-          {events.map((event, index) => <div key={index} className="group bg-blush rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+          {events.map((event, index) => <motion.div 
+            key={index} 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="group bg-blush rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+          >
               <div className="grid md:grid-cols-5 gap-0">
                 {/* Image */}
                 <div className="md:col-span-2 relative h-64 md:h-auto overflow-hidden">
@@ -52,7 +80,7 @@ export function Events() {
                   <h3 className="font-display text-3xl font-bold text-mauve mb-4 group-hover:text-wine transition-colors">
                     {event.title}
                   </h3>
-                  <p className="font-body text-mauve/70 mb-6 leading-relaxed">
+                  <p className="font-body text-mauve mb-6 leading-relaxed">
                     {event.description}
                   </p>
 
@@ -82,13 +110,13 @@ export function Events() {
                   </button>
                 </div>
               </div>
-            </div>)}
+            </motion.div>)}
         </div>
 
         {/* CTA */}
         <div className="mt-20 text-center">
           <div className="max-w-2xl mx-auto">
-            <p className="font-body text-xl text-mauve/70 mb-6 leading-relaxed">
+            <p className="font-body text-xl text-mauve mb-6 leading-relaxed">
               "We Begin Here" - This is where the story starts, where connections are forged,
               and where Africa's next generation of women leaders gather.
             </p>

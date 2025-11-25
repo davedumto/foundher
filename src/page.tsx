@@ -20,14 +20,14 @@ export function App() {
       <section id="community">
         {/* <Community /> */}
       </section>
-      <section id="membership">
+      <section>
         {/* <Membership /> */}
       </section>
       <section id="stories">
         <SuccessStories />
       </section>
       <section id="leadership">
-        <Leadership />
+        {/* <Leadership /> */}
       </section>
       <section id="events">
         <Events />

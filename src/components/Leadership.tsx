@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import { LinkedinIcon, TwitterIcon } from 'lucide-react';
+import { motion } from 'framer-motion';
 export function Leadership() {
   const leaders = [{
     name: 'Nneka Okoye',
@@ -22,21 +25,46 @@ export function Leadership() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <span className="inline-block px-6 py-2 bg-wine/10 border border-wine text-wine font-display text-sm tracking-wider uppercase rounded-full mb-6">
+          <motion.span 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="inline-block px-6 py-2 bg-wine/10 border border-wine text-wine font-display text-sm tracking-wider uppercase rounded-full mb-6"
+          >
             Leadership Spotlight
-          </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-mauve mb-6">
+          </motion.span>
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-mauve mb-6"
+          >
             Trailblazers <span className="text-wine">Leading the Way</span>
-          </h2>
-          <p className="font-body text-xl text-mauve/70 max-w-3xl mx-auto leading-relaxed">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="font-body text-xl text-mauve max-w-3xl mx-auto leading-relaxed"
+          >
             Meet the exceptional women founders who are redefining business
             success across Africa.
-          </p>
+          </motion.p>
         </div>
 
         {/* Leaders */}
         <div className="space-y-20">
-          {leaders.map((leader, index) => <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+          {leaders.map((leader, index) => <motion.div 
+            key={index} 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
+            viewport={{ once: true, margin: "-150px" }}
+            className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}
+          >
               {/* Image */}
               <div className={`relative ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                 <div className="absolute -inset-4 bg-gradient-to-br from-wine/20 to-dusty-rose/20 rounded-3xl blur-2xl"></div>
@@ -64,7 +92,7 @@ export function Leadership() {
                 <p className="font-display text-xl text-wine font-semibold mb-6">
                   {leader.title}
                 </p>
-                <p className="font-body text-lg text-mauve/70 leading-relaxed mb-8">
+                <p className="font-body text-lg text-mauve leading-relaxed mb-8">
                   {leader.bio}
                 </p>
 
@@ -81,7 +109,7 @@ export function Leadership() {
                   Read Full Story
                 </button>
               </div>
-            </div>)}
+            </motion.div>)}
         </div>
       </div>
     </section>;

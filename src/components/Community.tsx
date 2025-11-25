@@ -41,7 +41,7 @@ export function Community() {
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-mauve mb-6">
             Meet Our <span className="text-wine">Visionary Founders</span>
           </h2>
-          <p className="font-body text-xl text-mauve/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-body text-xl text-mauve max-w-3xl mx-auto leading-relaxed">
             A diverse community of African women leaders building innovative
             businesses across the continent and beyond.
           </p>
@@ -80,7 +80,7 @@ export function Community() {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <p className="font-body text-xl text-mauve/70 mb-6">
+          <p className="font-body text-xl text-mauve mb-6">
             Join 500+ African women founders making an impact
           </p>
           <button className="px-10 py-5 bg-gradient-to-r from-wine to-burgundy hover:from-burgundy hover:to-wine text-white font-display font-semibold text-lg rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
