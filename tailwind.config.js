@@ -17,8 +17,8 @@ module.exports = {
         ivory: '#FFFBF5',
       },
       fontFamily: {
-        'display': ['Orbitron', 'sans-serif'],
-        'body': ['Inter', 'sans-serif'],
+        'display': ['Cinzel', 'serif'],
+        'body': ['Cagliostro', 'sans-serif'],
       },
     },
   },
