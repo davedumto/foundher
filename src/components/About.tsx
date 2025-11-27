@@ -49,7 +49,7 @@ export function About() {
 
       {/* Full-Bleed Image Moment */}
       <div className="relative h-[70vh] mb-32">
-        <img src="/women1.jpg" alt="African women entrepreneurs networking" className="w-full h-full object-cover" />
+        <img src="/women1.jpg" alt="Professional African women founders collaborating and sharing business insights" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-mauve/60 via-transparent to-transparent"></div>
 
         {/* Quote Overlay */}
@@ -98,7 +98,7 @@ export function About() {
                 </div>
               </div>
               <div className="h-64 md:h-auto">
-                <img src="/women-connecting.jpg" alt="African women networking" className="w-full h-full object-cover" />
+                <img src="/women-connecting.jpg" alt="Elite network of African women entrepreneurs building strategic partnerships" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@ export function About() {
           <div className="lg:col-span-3 bg-blush rounded-3xl overflow-hidden">
             <div className="grid md:grid-cols-5">
               <div className="md:col-span-2 h-64 md:h-auto">
-                <img src="/women-group.jpg" alt="African women founders gathering" className="w-full h-full object-cover" />
+                <img src="/women-group.jpg" alt="Pan-African women founders gathering representing 30+ countries across Africa" className="w-full h-full object-cover" />
               </div>
               <div className="md:col-span-3 p-12 lg:p-16 flex flex-col justify-center">
                 <div className="w-12 h-12 rounded-full bg-coral/20 flex items-center justify-center mb-8">

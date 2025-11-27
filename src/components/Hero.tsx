@@ -7,15 +7,15 @@ import Link from 'next/link';
 export function Hero() {
   return <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-wine via-wine to-burgundy overflow-hidden">
       {/* Geometric Pattern Overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-32 h-32 border-2 border-rose-gold rotate-45"></div>
+      <div className="absolute inset-0 opacity-10 ">
+        <div className="absolute top-20 left-10 w-32 h-32 border-2 border-rose-gold rotate-45 "></div>
         <div className="absolute bottom-40 right-20 w-48 h-48 border-2 border-rose-gold rotate-12"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 border-2 border-dusty-rose rotate-45"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 border-2 border-dusty-rose rotate-45 "></div>
       </div>
 
       {/* Background Image Overlay */}
-      <div className="absolute inset-0 opacity-20">
-        <img src="/women-connecting.jpg" alt="African women entrepreneurs connecting" className="w-full h-full object-cover" />
+      <div className="absolute inset-0 opacity-75">
+        <img src="/women-connecting.jpg" alt="African women entrepreneurs networking and building business connections at FoundHer gathering" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-br from-wine/90 via-wine/80 to-burgundy/90"></div>
       </div>
 
