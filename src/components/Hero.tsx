@@ -3,6 +3,7 @@
 import React from 'react';
 import { ArrowRightIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 export function Hero() {
   return <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-wine via-wine to-burgundy overflow-hidden">
       {/* Geometric Pattern Overlay */}
@@ -58,10 +59,15 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
-          <button className="group px-10 py-5 bg-rose-gold hover:bg-rose-gold/90 text-white font-display font-semibold text-lg rounded-lg transition-all duration-300 flex items-center gap-3 shadow-2xl hover:shadow-rose-gold/50 hover:scale-105">
+          <Link 
+            href="https://tally.so/r/D4qzxN" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group px-10 py-5 bg-rose-gold hover:bg-rose-gold/90 text-white font-display font-semibold text-lg rounded-lg transition-all duration-300 flex items-center gap-3 shadow-2xl hover:shadow-rose-gold/50 hover:scale-105"
+          >
             Join The Network
             <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
 {/* 
           <button className="px-10 py-5 bg-transparent border-2 border-blush text-blush hover:bg-blush hover:text-wine font-display font-semibold text-lg rounded-lg transition-all duration-300">
             Explore Opportunities

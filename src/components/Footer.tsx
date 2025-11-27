@@ -35,8 +35,8 @@ export function Footer() {
               <div className="space-y-3">
                 <div className="flex items-start gap-3 justify-center md:justify-start">
                   <MailIcon className="w-5 h-5 text-rose-gold flex-shrink-0 mt-0.5" />
-                  <a href="mailto:hello@africanwomenfounders.com" className="font-body text-blush/80 hover:text-rose-gold transition-colors">
-                    hello@africanwomenfounders.com
+                  <a href="mailto:lydia@foundhertable.com" className="font-body text-blush/80 hover:text-rose-gold transition-colors">
+                    lydia@foundhertable.com
                   </a>
                 </div>
                 <div className="flex items-start gap-3 justify-center md:justify-start">

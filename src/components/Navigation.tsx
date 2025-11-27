@@ -73,14 +73,6 @@ export function Navigation() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    if (href === '#contact') {
-      // Scroll to footer for contact
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'smooth'
-      });
-      return;
-    }
     const element = document.querySelector(href);
     if (element) {
       const offset = 80; // Account for fixed nav height
@@ -159,7 +151,7 @@ export function Navigation() {
               >
                 {link.label}
                 {isActive && (
-                  <span className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1 h-6 bg-rose-gold rounded-full"></span>
+                  <span className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-1 h-6 bg-rose-gold rounded-full"></span>
                 )}
               </a>
             );

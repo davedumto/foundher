@@ -3,6 +3,7 @@
 import React from 'react';
 import { ArrowRightIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 export function About() {
   return <section className="bg-champagne">
       {/* Hero Statement - Minimal & Bold */}
@@ -176,10 +177,15 @@ export function About() {
             Join a community of women who understand the unique challenges and
             opportunities of building businesses in Africa.
           </p>
-          <button className="px-12 py-5 bg-wine hover:bg-wine/90 text-white font-display font-semibold text-lg rounded-full transition-all duration-300 inline-flex items-center gap-3">
+          <Link 
+            href="https://tally.so/r/D4qzxN" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="px-12 py-5 bg-wine hover:bg-wine/90 text-white font-display font-semibold text-lg rounded-full transition-all duration-300 inline-flex items-center gap-3"
+          >
             Join FoundHer
             <ArrowRightIcon className="w-5 h-5" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>;

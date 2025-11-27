@@ -3,6 +3,7 @@
 import React from 'react';
 import { CalendarIcon, MapPinIcon, UsersIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 export function Events() {
   const events = [{
     title: 'The FoundHer Table - Inaugural Gathering',
@@ -105,9 +106,14 @@ export function Events() {
                     </div>
                   </div>
 
-                  <button className="self-start px-8 py-3 bg-gradient-to-r from-wine to-burgundy hover:from-burgundy hover:to-wine text-white font-display font-semibold rounded-lg transition-all duration-300 hover:shadow-lg">
+                  <Link 
+                    href="https://tally.so/r/D4qzxN" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="self-start px-8 py-3 bg-gradient-to-r from-wine to-burgundy hover:from-burgundy hover:to-wine text-white font-display font-semibold rounded-lg transition-all duration-300 hover:shadow-lg inline-block text-center"
+                  >
                     Request Invitation
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>)}
