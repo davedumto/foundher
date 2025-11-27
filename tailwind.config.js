@@ -7,14 +7,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        wine: '#7D2638',
-        burgundy: '#5C1A26',
-        'rose-gold': '#D4A574',
-        blush: '#F5E6E8',
-        mauve: '#9B7B8A',
-        'dusty-rose': '#C19A9A',
-        champagne: '#F8F5F1',
-        ivory: '#FFFBF5',
+        wine: '#420806',
+        burgundy: '#420806',
+        'rose-gold': '#FDE59B',
+        blush: '#F9F9F9',
+        mauve: '#420806',
+        'dusty-rose': '#F8D27F',
+        champagne: '#F9F9F9',
+        ivory: '#F9F9F9',
       },
       fontFamily: {
         'display': ['Cinzel', 'serif'],
