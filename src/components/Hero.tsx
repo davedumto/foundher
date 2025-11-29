@@ -15,7 +15,7 @@ export function Hero() {
 
       {/* Background Image Overlay */}
       <div className="absolute inset-0 opacity-75">
-        <img src="/women-connecting.jpg" alt="African women entrepreneurs networking and building business connections at FoundHer gathering" className="w-full h-full object-cover" />
+        <img src="/image1.jpg" alt="African women entrepreneurs networking and building business connections at FoundHer gathering" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-br from-wine/90 via-wine/80 to-burgundy/90"></div>
       </div>
 
